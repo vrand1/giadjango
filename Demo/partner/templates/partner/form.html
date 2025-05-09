@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление партнёра</title>
+</head>
+<body>
+    <h1>Добавить нового партнёра</h1>
+
+    <form method="post">{% csrf_token %}
+    <input type="text" name="partner_type" placeholder="Тип партнёра">
+    <input type="text" name="partner_name" placeholder="Название партнера">
+    <input type="text" name="director" placeholder="Директор">
+    <input type="text" name="email" placeholder="Электронная почта">
+    <input type="number" name="phone_number" placeholder="Номер телефона">
+    <input type="number" name="legal_address" placeholder="Юридический адрес">
+    <input type="number" name="partner_rating" placeholder="Рейтинг">
+    <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+        .partner-table {
+            border-collapse: collapse;
+            margin-bottom: 20px; /* Отступ между таблицами */
+            width: 400px; /* Автоматическая ширина по содержимому */
+            max-width: 400px; /* Максимальная ширина (можно изменить) */
+
+            vertical-align: top; /* Выравнивание по верхнему краю */
+            border: 3px solid black;
+        }
+
+        .partner-table th,
+        .partner-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border: none;
+        }
+
+        .partner-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">{{ title }}</h1>
+
+
+        <!-- Каждая строка таблицы = 1 блок данных партнера (5 колонок) -->
+        <!-- Первая строка: Тип | Наименование + Скидка -->
+
+            {% for sale in sales %}
+        <table class="partner-table">
+    <tbody>
+        <tr>
+            <td>
+                {{ sale.Date }}
+            </td>
+        </tr>
+        <tr>
+            <td> {{ sale.Count }}</td>
+        </tr>
+        <tr>
+            <td>{{ sale.ProductionType.Name }}</td>
+        </tr>
+      </tbody>
+</table>
+            {% endfor %}
+
+
+    </div>
+</body>
+</html>

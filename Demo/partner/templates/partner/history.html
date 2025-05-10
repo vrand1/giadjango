@@ -6,11 +6,11 @@
      <style>
         .partner-table {
             border-collapse: collapse;
-            margin-bottom: 20px; /* Отступ между таблицами */
-            width: 400px; /* Автоматическая ширина по содержимому */
-            max-width: 400px; /* Максимальная ширина (можно изменить) */
+            margin-bottom: 20px; 
+            width: 400px; 
+            max-width: 400px; 
 
-            vertical-align: top; /* Выравнивание по верхнему краю */
+            vertical-align: top; 
             border: 3px solid black;
         }
 
@@ -30,9 +30,6 @@
     <div class="container mt-4">
         <h1 class="mb-4">{{ title }}</h1>
 
-
-        <!-- Каждая строка таблицы = 1 блок данных партнера (5 колонок) -->
-        <!-- Первая строка: Тип | Наименование + Скидка -->
 
             {% for sale in sales %}
         <table class="partner-table">

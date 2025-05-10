@@ -6,11 +6,11 @@
      <style>
         .partner-table {
             border-collapse: collapse;
-            margin-bottom: 20px; /* Отступ между таблицами */
-            width: 400px; /* Автоматическая ширина по содержимому */
-            max-width: 400px; /* Максимальная ширина (можно изменить) */
+            margin-bottom: 20px; 
+            width: 400px;
+            max-width: 400px; 
 
-            vertical-align: top; /* Выравнивание по верхнему краю */
+            vertical-align: top; 
             border: 3px solid black;
         }
 
@@ -25,9 +25,9 @@
             background-color: #f2f2f2;
         }
         a.no-style {
-            color: inherit;          /* Наследует цвет текста */
-            text-decoration: none;  /* Убирает подчёркивание */
-            cursor: pointer;        /* Курсор-указатель при наведении */
+            color: inherit;          
+            text-decoration: none;  
+            cursor: pointer;        
         }
 
         .btn-history {
@@ -53,8 +53,7 @@
         <a href="add_partner" class="btn btn-history">Добавление партнёра</a>
         <h1> </h1>
 
-        <!-- Каждая строка таблицы = 1 блок данных партнера (5 колонок) -->
-        <!-- Первая строка: Тип | Наименование + Скидка -->
+ 
 
             {% for partner in partners %}
         <table class="partner-table">
